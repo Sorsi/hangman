@@ -1,4 +1,3 @@
 <app-drawing [guesses]="guesses" [question]="question"></app-drawing>
-<app-question [question]="question"></app-question>
-<app-keyboard></app-keyboard>
-<button (click)="dummyClick()">dummy click</button>
+<app-question [guesses]="guesses" [question]="question"></app-question>
+<app-keyboard [question]="question" (keyPressed)="guess($event)"></app-keyboard>

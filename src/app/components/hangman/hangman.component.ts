@@ -42,10 +42,4 @@ export class HangmanComponent implements OnInit {
     this.guesses = [];
     this.getNewQuestion();
   }
-
-  //TODO: remove it if keyboard
-  dummyClick() {
-    const key = prompt('Enter a key') || '';
-    this.guess(key);
-  }
 }

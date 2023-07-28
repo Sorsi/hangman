@@ -1,11 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { IQuestions } from '../interfaces/interfaces';
 
 const defaultJSONPath = 'assets/data.json';
-export interface IQuestions {
-  category: string;
-  items: string[];
-}
 
 @Injectable({
   providedIn: 'root',
