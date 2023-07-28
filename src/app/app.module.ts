@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { DrawingComponent } from './components/drawing/drawing.component';
 import { KeyboardComponent } from './components/keyboard/keyboard.component';
 import { QuestionComponent } from './components/question/question.component';
+import { HangmanComponent } from './components/hangman/hangman.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DrawingComponent,
     KeyboardComponent,
-    QuestionComponent
+    QuestionComponent,
+    HangmanComponent
   ],
   imports: [
     BrowserModule,
