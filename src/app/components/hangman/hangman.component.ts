@@ -34,6 +34,13 @@ export class HangmanComponent implements OnInit {
     return this.questions[Math.floor(Math.random() * this.questions.length)];
   }
 
+  guess(letter: string) {
+    if (this.guesses.includes(letter)) {
+      return;
+    }
+    this.guesses.push(letter);
+  }
+
   reset(): void {
     this.guesses = [];
     this.getNewQuestion();
