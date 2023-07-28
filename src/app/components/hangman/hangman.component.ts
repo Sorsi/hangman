@@ -21,12 +21,9 @@ export class HangmanComponent implements OnInit {
 
   ngOnInit(): void {
     this.hangmanService.getQuestions().subscribe((res) => {
-      console.log(res);
-
       this.questions = res.items;
       this.category = res.category;
       this.question = this.getNewQuestion();
-      console.log('qqqq ', this.question);
     });
   }
 
@@ -35,14 +32,20 @@ export class HangmanComponent implements OnInit {
   }
 
   guess(letter: string) {
-    if (this.guesses.includes(letter)) {
+    if (!letter || this.guesses.includes(letter)) {
       return;
     }
-    this.guesses.push(letter);
+    this.guesses = [...this.guesses, letter];
   }
 
   reset(): void {
     this.guesses = [];
     this.getNewQuestion();
+  }
+
+  //TODO: remove it if keyboard
+  dummyClick() {
+    const key = prompt('Enter a key') || '';
+    this.guess(key);
   }
 }
