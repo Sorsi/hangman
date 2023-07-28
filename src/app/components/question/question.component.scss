@@ -1,0 +1,14 @@
+.characters {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	margin: 30px auto;
+
+	.character {
+		padding-bottom: 0.5rem;
+		border-bottom: 1px solid black;
+		min-width: 20px;
+		min-height: 20px;
+		text-align: center;
+	}
+}

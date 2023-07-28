@@ -1,1 +1,8 @@
-<h1>question {{question}}</h1>
+<h1>{{question}}</h1>
+<div class="characters">
+	<div class="character" *ngFor="let character of characters">
+		<div class="character-value">
+			{{character.guessed ? character.value : ''}}
+		</div>
+	</div>
+</div>
