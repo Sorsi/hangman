@@ -31,11 +31,7 @@ export class HangmanComponent implements OnInit {
   }
 
   getNewQuestion(): string {
-    return this.questions[this.getRandomIndex()];
-  }
-
-  getRandomIndex(): number {
-    return Math.floor(Math.random() * this.questions.length);
+    return this.questions[Math.floor(Math.random() * this.questions.length)];
   }
 
   reset(): void {
